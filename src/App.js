@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { Navbar } from "react-bootstrap";
+import { NavItem } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Routes from './Routes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div className="App container">
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand>
+            <Link to="/">Fisher Bookstore</Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse className="justify-content-end">
+            <Nav>
+              <NavItem>
+                <Nav.Link href="/books">Books</Nav.Link>
+              </NavItem>
+            </Nav>
+          </Navbar.Collapse>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse className="justify-content-end">
+            <Nav>
+              <NavItem>
+                <Nav.Link href="/authors">Authors</Nav.Link>
+              </NavItem>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        <Routes />
+      </div>
+    );
+  }
 }
-
-export default App;
