@@ -7,9 +7,13 @@ export function AuthorDisplay(props) {
         <div className="display">
             <h3>Authors</h3>
                 {props.authors.map(a => (
-                   <p>{a.author.author}</p>,
-                   <p>{a.author.birth}</p>,
-                   <p>{a.author.nationality}</p>
+                   <p align="center">
+                    Author: {a.author} <br>
+                    </br>
+                    Birth Year: {a.birth} <br>
+                    </br>
+                    Nationality: {a.nationality}
+                   </p>
                 ))}
         </div>
     );
