@@ -2,7 +2,7 @@ import React from "react";
 //import { AuthorCard } from "./AuthorCard";
 //import { CardColumns } from "react-bootstrap";
 
-export function AuthorDisplay(props) {
+export function AuthorsDisplay(props) {
     return (
         <div className="display">
             <h3>Authors</h3>
