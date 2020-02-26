@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Authors.css";
-import { AuthorsDisplay } from "./AuthorsDisplay";
+import { AuthorDisplay } from "./AuthorDisplay";
 
 export default class Authors extends Component {
     constructor(props) {
@@ -51,7 +51,7 @@ export default class Authors extends Component {
         return (
             <div className="Authors">
                 <div className="lander">
-                    <AuthorsDisplay books={this.state.authors}  />
+                    <AuthorDisplay books={this.state.authors}  />
                 </div>
             </div>
         );
