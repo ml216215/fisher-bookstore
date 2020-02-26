@@ -1,5 +1,5 @@
 import React from "react";
-//import { AuthorCard } from "./AuthorCard";
+import { AuthorCard } from "./AuthorCard";
 import { CardColumns } from "react-bootstrap";
 
 export function AuthorDisplay(props) {
@@ -8,7 +8,7 @@ export function AuthorDisplay(props) {
             <h3>Authors</h3>
             <CardColumns>
                 {props.authors.map(a => (
-                    <p>{a.author}</p>
+                    <AuthorCard author={a} key={a.id} />
                 ))}
             </CardColumns>
         </div>
